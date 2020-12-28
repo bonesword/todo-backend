@@ -11,7 +11,7 @@ let Todo = require('./todo.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://todo:todo@cluster0.oa65f.mongodb.net/todo?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://todo:todo@cluster0.oa65f.mongodb.net/todo?retryWrites=true&w=majority', { useNewUrlParser: true , useUnifiedTopology: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
